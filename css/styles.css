@@ -677,7 +677,7 @@ img {
 }
 
 .download-description {
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
     max-width: 600px;
     margin: 0 auto 2rem;
     font-size: 1.125rem;
@@ -801,7 +801,7 @@ img {
 }
 
 .footer-copyright p {
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 0.875rem;
     margin: 0;
 }
@@ -809,7 +809,7 @@ img {
 .footer-kickstart-link {
     display: inline-block;
     margin-top: 0.75rem;
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 0.8125rem;
     text-decoration: none;
     transition: color 0.2s ease;
