@@ -3,35 +3,27 @@
   <head>
     <base href="./" />
     <meta property="og:site_name" content="Grayscale for Safari" />
-    <meta property="og:title" content="Home" />
-    <meta name="twitter:title" content="Home" />
-    <meta name="description" content="Grayscale for Safari reduces visual noise on Mac, iPhone, and iPad by turning distracting websites into calmer browsing experiences." />
-    <meta property="og:description" content="Reduce visual noise in Safari with a calmer grayscale browsing experience on Mac, iPhone, and iPad." />
-    <meta name="twitter:description" content="Reduce visual noise in Safari with a calmer grayscale browsing experience on Mac, iPhone, and iPad." />
-    <meta property="og:url" content="https://example.com/" />
-    <meta name="twitter:domain" content="example.com" />
+    <meta property="og:title" content="Grayscale for Safari" />
+    <meta name="twitter:title" content="Grayscale for Safari" />
+    <meta name="description" content="Turn Safari black and white to reduce visual noise and browse with fewer distractions." />
+    <meta property="og:description" content="Turn Safari black and white to reduce visual noise and browse with fewer distractions." />
+    <meta name="twitter:description" content="Turn Safari black and white to reduce visual noise and browse with fewer distractions." />
+    <meta property="og:url" content="https://grayscale.lessnoise.app/" />
+    <meta name="twitter:domain" content="grayscale.lessnoise.app" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:dnt" content="on" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Developer" />
-    <meta name="generator" content="Ignite v0.6.0" />
-    <title>Home</title>
+    <meta name="author" content="Less Noise" />
+    <title>Grayscale for Safari</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/bootstrap-icons.min.css" rel="stylesheet" />
     <link href="css/ignite-core.min.css" rel="stylesheet" />
-    <link href="https://example.com/" rel="canonical" />
+    <link href="https://grayscale.lessnoise.app/" rel="canonical" />
     <link href="images/favicon.png" rel="icon" />
     <link href="css/styles.css" rel="stylesheet" />
-    <style>
-:root {
-    --primary-color: #0f5fb8;
-    --primary-rgb: 15, 95, 184;
-    --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    color-scheme: light dark;
-}
-</style>
     <meta name="apple-itunes-app" content="app-id=6760229480" />
+    <script defer src="js/grayscale-localize.js"></script>
   </head>
   <body data-site-classes="site-shell">
     <header>
@@ -43,212 +35,129 @@
           <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
-              <li class="nav-item"><a href="#screenshots" class="nav-link text-nowrap">Screenshots</a></li>
-              <li class="nav-item"><a href="#features" class="nav-link text-nowrap">Features</a></li>
-              <li class="nav-item"><a href="#reviews" class="nav-link text-nowrap">Reviews</a></li>
-              <li class="nav-item"><a href="https://apps.apple.com/app/id6760229480" class="text-nowrap btn btn-sm btn-primary">Download</a></li>
+              <li class="nav-item"><a href="#screenshots" class="nav-link text-nowrap" data-i18n="navScreenshots">Screenshots</a></li>
+              <li class="nav-item"><a href="#features" class="nav-link text-nowrap" data-i18n="navFeatures">Features</a></li>
+              <li class="nav-item"><a href="#privacy" class="nav-link text-nowrap" data-i18n="navPrivacy">Privacy</a></li>
+              <li class="nav-item"><a href="https://apps.apple.com/app/id6760229480" class="text-nowrap btn btn-sm btn-primary" data-i18n="navDownload">Download</a></li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+
     <main class="site-main">
       <div class="ig-main-content">
-        <div id="hero" class="hero hero-centered">
+        <section id="hero" class="hero hero-centered grayscale-hero-localized">
           <div class="container">
+            <div class="language-switcher grayscale-language" aria-label="Language selector">
+              <button class="language-button" type="button" data-lang="en" aria-label="English">🇺🇸</button>
+              <button class="language-button" type="button" data-lang="fr" aria-label="Français">🇫🇷</button>
+              <button class="language-button" type="button" data-lang="es" aria-label="Español">🇪🇸</button>
+              <button class="language-button" type="button" data-lang="ja" aria-label="日本語">🇯🇵</button>
+              <button class="language-button" type="button" data-lang="de" aria-label="Deutsch">🇩🇪</button>
+              <button class="language-button" type="button" data-lang="zh" aria-label="简体中文">🇨🇳</button>
+              <button class="language-button" type="button" data-lang="pt" aria-label="Português">🇵🇹</button>
+              <button class="language-button" type="button" data-lang="it" aria-label="Italiano">🇮🇹</button>
+            </div>
             <div class="hero-content">
-              <img src="images/app-icon.png" alt="App Icon" class="hero-app-icon" />
-              <h1 class="hero-title">Grayscale for Safari</h1>
-              <p class="hero-subtitle">Reduce visual noise on Mac, iPhone &amp; iPad !</p>
+              <img src="images/app-icon.png" alt="Grayscale app icon" class="hero-app-icon" />
+              <h1 class="hero-title" data-i18n="heroTitle">Grayscale for Safari</h1>
+              <p class="hero-subtitle" data-i18n="heroSubtitle">Reduce visual noise on Mac, iPhone &amp; iPad.</p>
               <div class="hero-cta">
                 <a href="https://apps.apple.com/app/id6760229480" class="store-badge-link"><img src="images/app-store-download-black.svg" alt="Download on the App Store" class="store-badge store-badge-light-mode" /><img src="images/app-store-download-white.svg" alt="Download on the App Store" class="store-badge store-badge-dark-mode" /></a>
                 <a href="https://www.producthunt.com/products/grayscale-for-safari?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-grayscale-for-safari" class="product-hunt-badge" target="_blank" rel="noopener noreferrer">
-                  <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1174276&amp;theme=light&amp;t=1782112600289" alt="Grayscale for Safari - Turn Safari black and white and browse with less distraction on Product Hunt" width="250" height="54" />
+                  <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1174276&amp;theme=light&amp;t=1782112600289" alt="Grayscale for Safari on Product Hunt" width="250" height="54" />
                 </a>
               </div>
-              <div class="hero-rating">
-                <div class="rating-stars">
+              <div class="hero-rating" aria-label="5 star rating">
+                <div class="rating-stars" aria-hidden="true">
                   <span class="star">★</span>
                   <span class="star">★</span>
                   <span class="star">★</span>
                   <span class="star">★</span>
                   <span class="star">★</span>
                 </div>
-                <p class="rating-text"><span class="rating-count">(2 reviews)</span></p>
+                <p class="rating-text"><span class="rating-count" data-i18n="reviewsCount">(2 reviews)</span></p>
               </div>
             </div>
           </div>
-        </div>
-        <div id="screenshots" class="screenshots-section screenshots-carousel">
+        </section>
+
+        <section id="screenshots" class="screenshots-section screenshots-carousel">
           <div class="container">
             <div class="section-header">
-              <h2>See It in Action</h2>
-              <p class="section-description">A cleaner way to browse, without the visual noise.</p>
+              <h2 data-i18n="screensTitle">See It in Action</h2>
+              <p class="section-description" data-i18n="screensDescription">A cleaner way to browse, without the visual noise.</p>
             </div>
             <div class="screenshots-container">
-              <div class="screenshots-scroll">
-                <div class="screenshot-card">
-                  <button type="button" class="screenshot-trigger btn" data-bs-toggle="modal" data-bs-target="#screenshot-modal-0"><img src="images/screenshots/screenshot-1-thumb.jpg" alt="Screenshot 1" class="screenshot-image" width="560" height="1211" loading="eager" fetchpriority="high" decoding="async" /></button>
-                </div>
-                <div class="screenshot-card">
-                  <button type="button" class="screenshot-trigger btn" data-bs-toggle="modal" data-bs-target="#screenshot-modal-1"><img src="images/screenshots/screenshot-2-thumb.jpg" alt="Screenshot 2" class="screenshot-image" width="560" height="1211" loading="lazy" decoding="async" /></button>
-                </div>
-                <div class="screenshot-card">
-                  <button type="button" class="screenshot-trigger btn" data-bs-toggle="modal" data-bs-target="#screenshot-modal-2"><img src="images/screenshots/screenshot-3-thumb.jpg" alt="Screenshot 3" class="screenshot-image" width="560" height="1211" loading="lazy" decoding="async" /></button>
-                </div>
-              </div>
-            </div>
-            <div id="screenshot-modal-0" tabindex="-1" class="modal fade screenshot-modal" aria-labelledby="screenshotModalLabel0" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h3 class="modal-title h4">Screenshot 1</h3>
-                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                    <img src="images/screenshots/screenshot-1.jpg" alt="Screenshot 1" class="img-fluid screenshot-lightbox-image" width="1284" height="2778" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="screenshot-modal-1" tabindex="-1" class="modal fade screenshot-modal" aria-labelledby="screenshotModalLabel1" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h3 class="modal-title h4">Screenshot 2</h3>
-                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                    <img src="images/screenshots/screenshot-2.jpg" alt="Screenshot 2" class="img-fluid screenshot-lightbox-image" width="1284" height="2778" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="screenshot-modal-2" tabindex="-1" class="modal fade screenshot-modal" aria-labelledby="screenshotModalLabel2" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h3 class="modal-title h4">Screenshot 3</h3>
-                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" label="Close"></button>
-                  </div>
-                  <div class="modal-body text-center">
-                    <img src="images/screenshots/screenshot-3.jpg" alt="Screenshot 3" class="img-fluid screenshot-lightbox-image" width="1284" height="2778" loading="lazy" decoding="async" />
-                  </div>
-                </div>
+              <div class="screenshots-scroll grayscale-screenshots-scroll" aria-label="App screenshots">
+                <img src="images/screenshots/en/01.jpg" alt="Grayscale screenshot 1" class="screenshot-image" data-screenshot="1" width="420" height="908" loading="eager" fetchpriority="high" decoding="async" />
+                <img src="images/screenshots/en/02.jpg" alt="Grayscale screenshot 2" class="screenshot-image" data-screenshot="2" width="420" height="908" loading="lazy" decoding="async" />
+                <img src="images/screenshots/en/03.jpg" alt="Grayscale screenshot 3" class="screenshot-image" data-screenshot="3" width="420" height="908" loading="lazy" decoding="async" />
+                <img src="images/screenshots/en/04.jpg" alt="Grayscale screenshot 4" class="screenshot-image" data-screenshot="4" width="420" height="908" loading="lazy" decoding="async" />
+                <img src="images/screenshots/en/05.jpg" alt="Grayscale screenshot 5" class="screenshot-image" data-screenshot="5" width="420" height="908" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
-        </div>
-        <div id="features" class="features-section features-grid-layout features-grid-multiple-of-three">
+        </section>
+
+        <section id="features" class="features-section features-grid-layout features-grid-multiple-of-three">
           <div class="container">
             <div class="section-header">
-              <h2>Powerful Features</h2>
-              <p class="section-description">Everything you need to get things done.</p>
+              <h2 data-i18n="featuresTitle">Powerful Features</h2>
+              <p class="section-description" data-i18n="featuresDescription">Everything you need for calmer browsing.</p>
             </div>
-            <div class="features-grid">
+            <div class="features-grid grayscale-features-grid">
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-shield-check"></i>
-                </div>
-                <h3 class="feature-title">Privacy First</h3>
-                <p class="feature-description">No tracking, no analytics, no account needed.</p>
+                <div class="feature-icon"><i class="feature-icon-image bi-palette"></i></div>
+                <h3 class="feature-title" data-i18n="featureOneTitle">Grayscale websites</h3>
+                <p class="feature-description" data-i18n="featureOneText">Turn distracting websites black and white in Safari.</p>
               </div>
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-lightning-charge-fill"></i>
-                </div>
-                <h3 class="feature-title">Quick Setup</h3>
-                <p class="feature-description">Set it once and enable the Safari extension for instant use.</p>
+                <div class="feature-icon"><i class="feature-icon-image bi-stars"></i></div>
+                <h3 class="feature-title" data-i18n="featureTwoTitle">Keep what matters in color</h3>
+                <p class="feature-description" data-i18n="featureTwoText">Use the whitelist to keep selected domains untouched.</p>
               </div>
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-graph-up-arrow"></i>
-                </div>
-                <h3 class="feature-title">Lightweight</h3>
-                <p class="feature-description">Simple, lightweight, and private browsing.</p>
+                <div class="feature-icon"><i class="feature-icon-image bi-toggle-on"></i></div>
+                <h3 class="feature-title" data-i18n="featureThreeTitle">Control from Safari</h3>
+                <p class="feature-description" data-i18n="featureThreeText">Enable, disable, or whitelist the current site from the Safari extension.</p>
               </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-shield-check"></i>
-                </div>
-                <h3 class="feature-title">Focused Browsing</h3>
-                <p class="feature-description">Reduce visual noise and make feeds less stimulating.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-shield-check"></i>
-                </div>
-                <h3 class="feature-title">Customizable</h3>
-                <p class="feature-description">Keep selected domains in color with a whitelist.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="feature-icon-image bi-shield-check"></i>
-                </div>
-                <h3 class="feature-title">Easy Control</h3>
-                <p class="feature-description">One-tap control from the Safari extension for effortless use.</p>
+              <div class="feature-card" id="privacy">
+                <div class="feature-icon"><i class="feature-icon-image bi-shield-check"></i></div>
+                <h3 class="feature-title" data-i18n="featureFourTitle">Private by design</h3>
+                <p class="feature-description" data-i18n="featureFourText">No tracking, no analytics, no account. Your settings stay on your device.</p>
               </div>
             </div>
           </div>
-        </div>
-        <div id="reviews" class="testimonials-section testimonials-carousel">
-          <div class="container">
-            <div class="section-header">
-              <h2>What Users Say</h2>
-              <p class="section-description">Read reviews posted on the App Store.</p>
-            </div>
-            <div class="testimonials-scroll">
-              <div class="testimonial-card">
-                <div class="testimonial-rating">
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                </div>
-                <p class="testimonial-quote">thank u so much. it helps reduce my screen time so much as i login to fb only on my browser so seeing it in gray makes it boring so im barely on it! i used to be addicted to doomscrolling.</p>
-                <p class="testimonial-author">Taylorrr_1</p>
-              </div>
-              <div class="testimonial-card">
-                <div class="testimonial-rating">
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                  <span class="star">★</span>
-                </div>
-                <p class="testimonial-quote">Application minimaliste qui fait parfaitement ce qu’elle promet. L’extension s’intègre très bien dans Safari et permet de naviguer sans distractions visuelles. L’interface est propre, l’activation est instantanée et l’effet noir et blanc rend la navigation beaucoup plus calme pour les yeux. Très utile si on veut réduire le côté addictif de certains sites ou simplement rester concentré. Fonctionne parfaitement jusqu’à présent.</p>
-                <p class="testimonial-author">Cupcake288</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="download" class="download-section">
+        </section>
+
+        <section id="download" class="download-section">
           <div class="container">
             <div class="download-content">
-              <h2>Stay Focused with Grayscale!</h2>
-              <p class="download-description">Reduce visual noise and keep your browsing calmer.</p>
+              <h2 data-i18n="downloadTitle">Stay focused with Grayscale.</h2>
+              <p class="download-description" data-i18n="downloadDescription">Reduce visual noise and keep your browsing calmer.</p>
               <div class="store-badges">
                 <a href="https://apps.apple.com/app/id6760229480" class="store-badge-link"><img src="images/app-store-download-black.svg" alt="Download on the App Store" class="store-badge store-badge-light-mode" /><img src="images/app-store-download-white.svg" alt="Download on the App Store" class="store-badge store-badge-dark-mode" /></a>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
+
     <div class="site-footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
-            <p class="footer-tagline">Make browsing less addictive</p>
+            <p class="footer-tagline" data-i18n="footerTagline">Make browsing less addictive</p>
           </div>
         </div>
         <div class="footer-copyright">
           <div class="footer-links">
-            <a href="privacy/index.html" class="footer-privacy-link">Privacy Policy</a>
+            <a href="privacy/index.html" class="footer-privacy-link" data-i18n="privacyPolicy">Privacy Policy</a>
           </div>
-          <p>Copyright 2026 Grayscale – Calm Browsing. All rights reserved.</p>
-          <a href="https://kickstart.tools" class="footer-kickstart-link">Built with Kickstart</a>
+          <p data-i18n="copyright">Copyright 2026 Grayscale – Calm Browsing. All rights reserved.</p>
         </div>
       </div>
     </div>
