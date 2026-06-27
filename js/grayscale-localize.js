@@ -248,6 +248,27 @@ const grayscaleAliases = {
   it: 'it'
 };
 
+
+const grayscaleLanguageFlags = {
+  en: '🇺🇸',
+  fr: '🇫🇷',
+  es: '🇪🇸',
+  ja: '🇯🇵',
+  de: '🇩🇪',
+  zh: '🇨🇳',
+  pt: '🇵🇹',
+  it: '🇮🇹'
+};
+
+function setLanguageDropdownOpen(isOpen) {
+  const toggle = document.querySelector('.language-dropdown-toggle');
+  const menu = document.querySelector('.language-dropdown-menu');
+  if (!toggle || !menu) return;
+
+  toggle.setAttribute('aria-expanded', String(isOpen));
+  menu.classList.toggle('is-open', isOpen);
+}
+
 function normalizeGrayscaleLanguage(language) {
   if (!language) return 'en';
   const normalized = language.toLowerCase();
@@ -281,8 +302,10 @@ function setGrayscaleLanguage(language) {
     image.alt = `${copy.screenshotAlt} ${Number(image.dataset.screenshot)}`;
   });
 
-  document.querySelectorAll('.language-button').forEach((button) => {
-    button.setAttribute('aria-pressed', String(button.dataset.lang === selected));
+  document.querySelector('.language-current-flag').textContent = grayscaleLanguageFlags[selected] || grayscaleLanguageFlags.en;
+
+  document.querySelectorAll('.language-option').forEach((button) => {
+    button.setAttribute('aria-current', button.dataset.lang === selected ? 'true' : 'false');
   });
 
   localStorage.setItem('grayscale-page-language', selected);
@@ -293,8 +316,31 @@ function bootGrayscalePage() {
   const browserLanguage = navigator.language.toLowerCase();
   const initialLanguage = normalizeGrayscaleLanguage(storedLanguage || browserLanguage);
 
-  document.querySelectorAll('.language-button').forEach((button) => {
-    button.addEventListener('click', () => setGrayscaleLanguage(button.dataset.lang));
+  const toggle = document.querySelector('.language-dropdown-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      setLanguageDropdownOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+  }
+
+  document.querySelectorAll('.language-option').forEach((button) => {
+    button.addEventListener('click', () => {
+      setGrayscaleLanguage(button.dataset.lang);
+      setLanguageDropdownOpen(false);
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.language-nav-item')) {
+      setLanguageDropdownOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setLanguageDropdownOpen(false);
+    }
   });
 
   setGrayscaleLanguage(initialLanguage);
